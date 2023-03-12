@@ -9,16 +9,61 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - project_creation
 
 entities:
 - name
 - email
+- projectname
+- clientname
+- projecttype
 
 slots:
   name:
     type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: email
   email:
     type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: email
+  projectname:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: projectname
+  clientname:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: clientname
+  projecttype:
+    type: categorical
+    values:
+      - image
+      - video
+      - segmentation
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: projecttype
+
+forms:
+  project_creation_form:
+    required_slots:
+      - projectname
+      - clientname
+      - projectype
+  contact_creation_form:
+    required_slots:
+      - name
+      - email
 
 responses:
   utter_greet:
@@ -45,6 +90,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_project_creation_info:
+  - text: Created project {projectname} for {clientname} of type {projecttype}
 
 session_config:
   session_expiration_time: 60

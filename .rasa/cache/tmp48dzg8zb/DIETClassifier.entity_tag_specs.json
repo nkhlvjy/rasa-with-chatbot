@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-clientname",
+      "2": "I-clientname",
+      "3": "L-clientname",
+      "4": "U-clientname",
+      "5": "B-email",
+      "6": "I-email",
+      "7": "L-email",
+      "8": "U-email",
+      "9": "B-name",
+      "10": "I-name",
+      "11": "L-name",
+      "12": "U-name",
+      "13": "B-projectname",
+      "14": "I-projectname",
+      "15": "L-projectname",
+      "16": "U-projectname",
+      "17": "B-projecttype",
+      "18": "I-projecttype",
+      "19": "L-projecttype",
+      "20": "U-projecttype",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-clientname": 1,
+      "I-clientname": 2,
+      "L-clientname": 3,
+      "U-clientname": 4,
+      "B-email": 5,
+      "I-email": 6,
+      "L-email": 7,
+      "U-email": 8,
+      "B-name": 9,
+      "I-name": 10,
+      "L-name": 11,
+      "U-name": 12,
+      "B-projectname": 13,
+      "I-projectname": 14,
+      "L-projectname": 15,
+      "U-projectname": 16,
+      "B-projecttype": 17,
+      "I-projecttype": 18,
+      "L-projecttype": 19,
+      "U-projecttype": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

@@ -29,12 +29,21 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: user supplies customer info
+- story: contact creation
   steps:
-  - intent: greet
-  - action: utter_ask_for_contact_info
   - intent: supply_contact_info
     entities:
     - name
     - email
+  - slot_was_set:
+    - name
   - action: utter_acknowledge_provided_info
+
+- story: create project
+  steps:
+  - intent: project_creation
+    entities:
+    - projectname
+  - slot_was_set:
+    - projectname
+  - action: utter_project_creation_info

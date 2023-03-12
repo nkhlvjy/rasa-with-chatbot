@@ -10,6 +10,12 @@ nlu:
     - [Susan](name), [susan@email.com](email)
     - Sure. It's [Fred](name). My email is [fred@email.com](email).
 
+- intent: project_creation
+  examples: |
+    - Create Project [ProjectA](projectname) 
+    - I want to create Project [iphone](projectname)
+    - Give me project [android](projectname)
+    
 - intent: greet
   examples: |
     - hey
